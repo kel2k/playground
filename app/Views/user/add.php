@@ -2,7 +2,7 @@
 
     <div class="card">
         <div class="card-header">
-            <h4 class="card-title">Vertical Form with Icons</h4>
+            <h4 class="card-title">Tambah User</h4>
         </div>
         <div class="card-content">
             <div class="card-body">
@@ -14,7 +14,7 @@
                                     <label for="first-name-icon">Username</label>
                                     <div class="position-relative">
                                         <input type="text" required name="username" class="form-control"
-                                            placeholder="Input with icon left" id="first-name-icon">
+                                            placeholder="Username" id="first-name-icon">
                                         <div class="form-control-icon">
                                             <i class="bi bi-person"></i>
                                         </div>

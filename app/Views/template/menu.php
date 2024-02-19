@@ -93,24 +93,6 @@
 
                             </ul>
                         </li>
-                        <li class="sidebar-title">Transaksi</li>
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-stack"></i>
-                                <span>Data Transaksi</span>
-                            </a>
-
-                            <ul class="submenu ">
-                                <li class="submenu-item  ">
-                                    <a href="/transaksi" class="submenu-link">Transaksi</a>
-
-                                </li>
-                                <li class="submenu-item  ">
-                                    <a href="/transaksi/bukti" class="submenu-link">Bukti Pembelian</a>
-
-                                </li>
-                            </ul>
-                        </li>
                     </ul>
                 </div>
             </div>
