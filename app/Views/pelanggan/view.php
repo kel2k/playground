@@ -29,7 +29,9 @@
                                 <th>Alamat</th>
                                 <th>No Telpon</th>
                                 <th>Nama Orang Tua</th>
-                                <th>Created_at</th>
+                                <th>Biaya</th>
+                                <th>Permainan</th>
+                                <th>Created At</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -52,6 +54,14 @@
                                 </td>
                                 <td>
                                     <?php echo $k->nama_orangtua ?>
+                                </td>
+                                <td>
+                                <?php echo $k->biaya ?>
+                        </td>
+
+
+                                <td>
+                                    <?php echo $k->permainan ?>
                                 </td>
                                 <td>
                                     <?php echo $k->created_at ?>

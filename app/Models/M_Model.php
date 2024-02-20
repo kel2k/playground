@@ -6,6 +6,12 @@ use Intervention\Image\ImageManagerStatic as Image;
 
 class M_model extends Model
 {
+    protected $table = 'transaksi'; // sesuaikan dengan nama tabel yang benar
+
+    protected $primaryKey = 'id_transaksi';
+
+    protected $allowedFields = ['pelanggan_id', 'mulai_jam', 'selesai_jam', 'status', 'created_at'];
+
     public function kurangiJumlahBarang($id_barang, $jumlah)
     {
         // Ambil jumlah barang saat ini dari database
@@ -17,7 +23,10 @@ class M_model extends Model
         // Update jumlah barang di database
         $this->db->table('barang')->where('id_barang', $id_barang)->update(['jumlah' => $jumlah_baru]);
     }
-
+    public function updateTransaction($data, $where)
+    {
+        return $this->update($where, $data);
+    }
     public function checkUsernameInDatabase($username)
     {
         // Perform a database query to check if the username is in use
