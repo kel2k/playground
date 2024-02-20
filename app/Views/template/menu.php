@@ -64,11 +64,15 @@
 
                             <ul class="submenu ">
                                 <li class="submenu-item  ">
-                                    <a href="/user/add" class="submenu-link">Tambah User</a>
+                                    <a href="/pelanggan/adduser" class="submenu-link">Tambah Pelanggan</a>
 
                                 </li>
                                 <li class="submenu-item  ">
-                                    <a href="/user" class="submenu-link">User</a>
+                                    <a href="/user" class="submenu-link">Data User</a>
+
+                                </li>
+                                <li class="submenu-item  ">
+                                    <a href="/pelanggan" class="submenu-link">Data Pelanggan</a>
 
                                 </li>
 
@@ -76,19 +80,19 @@
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
-                                <span>Data Barang</span>
+                                <span>Biling Playground</span>
                             </a>
 
                             <ul class="submenu ">
-                                <li class="submenu-item  ">
+                                <!-- <li class="submenu-item  ">
                                     <a href="/barang/add" class="submenu-link">Tambah Barang</a>
 
                                 </li>
                                 <li class="submenu-item  ">
                                     <a href="/barang/addstock" class="submenu-link">Tambah Stock</a>
-                                </li>
+                                </li> -->
                                 <li class="submenu-item  ">
-                                    <a href="/barang" class="submenu-link">Barang</a>
+                                    <a href="/playground" class="submenu-link">Biling</a>
                                 </li>
 
                             </ul>

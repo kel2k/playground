@@ -42,48 +42,6 @@ class user extends BaseController
         // Uncomment the following line to enable redirection
         return redirect()->to('/user');
     }
-    public function adduser()
-    {
-        $model = new M_model();
-
-        $data['user'] = $model->tampil('user');
-        echo view('/template/header');
-        echo view('/template/menu');
-        echo view('/user/add', $data);
-        echo view('/template/footer');
-    }
-    public function aksi_adduser()
-    {
-        $model = new M_model();
-        // $on='guru.user = user.id_user';
-        $username = $this->request->getPost('username');
-        $password = $this->request->getPost('password');
-        $nama = $this->request->getPost('nama');
-        $email = $this->request->getPost('email');
-        $level = $this->request->getPost('level');
-
-        $user = array(
-            'username' => $username,
-            'password' => md5('password'),
-            'email' => $email,
-            'level' => '2',
-            'created_at' => date('Y-m-d H:i:s')
-        );
-
-        $model = new M_model();
-        $model->simpan('user', $user);
-        return redirect()->to('/user');
-    }
-    public function hapus($id)
-    {
-        $model = new M_model();
-
-        // Kondisi untuk menghapus data dari tabel 'anggota'
-        $where1 = array('id_user' => $id);
-        $model->hapus('user', $where1);
-
-        return redirect()->to(base_url('/user'));
-    }
-
+   
 
 }
