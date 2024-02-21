@@ -38,7 +38,7 @@
                   <th>Nama Anak</th>
                   <th>Mulai Jam</th>
                   <th>Selesai Jam</th>
-                  <th>Durasi</th>
+                
                 </tr>
               </thead>
               <tbody>
@@ -52,7 +52,7 @@
                   <td><?php echo $k->nama_pelanggan?></td>
                   <td><?php echo $k->mulai_jam ?></td>
                   <td><?php echo $k->selesai_jam ?></td>
-                  <td id="durasi-<?php echo $no ?>"><?php echo $k->durasi ?></td>
+        
                 </tr>
                 <?php
                   }
@@ -88,7 +88,6 @@
                 <tr>
                   <td><?php echo $no++ ?></td>
                   <td><?php echo $k->nama_pelanggan?></td>
-                  <td><?php echo $k->durasi ?></td>
                 </tr>
                 <?php
                   }
@@ -103,30 +102,3 @@
   </section>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-const hitungMundur = () => {
-  const rows = document.querySelectorAll(".table-responsive tbody tr");
-
-  for (const row of rows) {
-    const durasiElement = row.querySelector("#durasi");
-    const durasi = durasiElement.textContent;
-
-    const sekarang = new Date();
-    const selisihWaktu = durasi * 1000 - sekarang; // Konversi ke milidetik
-
-    const hari = Math.floor(selisihWaktu / (1000 * 60 * 60 * 24));
-    const jam = Math.floor((selisihWaktu % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const menit = Math.floor((selisihWaktu % (1000 * 60 * 60)) / (1000 * 60));
-    const detik = Math.floor((selisihWaktu % (1000 * 60)) / 1000);
-
-    const hitungMundurElement = document.createElement("td");
-    hitungMundurElement.textContent = `${hari} Hari, ${jam} Jam, ${menit} Menit, ${detik} Detik`;
-
-    row.appendChild(hitungMundurElement);
-  }
-
-  setTimeout(hitungMundur, 1000); // Update hitungan mundur setiap 1 detik
-};
-</script>

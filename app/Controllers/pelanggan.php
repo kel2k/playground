@@ -21,7 +21,7 @@ class pelanggan extends BaseController
         $model = new M_model();
         $on = 'pelanggan.id_pelanggan=transaksi.pelanggan_id';
 
-        $data['vuser'] = $model->join2('pelanggan', 'transaksi', $on);
+        $data['k'] = $model->join2('pelanggan', 'transaksi', $on);
         echo view('/template/header');
         echo view('/template/menu');
         echo view('/pelanggan/add', $data);

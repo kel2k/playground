@@ -1,3 +1,4 @@
+
 <div class="col-md-6 col-12">
 
   <div class="card">
@@ -59,14 +60,19 @@
                   </div>
                 </div>
               </div>
+              
               <div class="col-12">
 
                 <div class="form-group has-icon-left">
                   <label for="email-id-icon">Nama Permainan</label>
                   <select name="permainan" class="form-control" required>
-                    <option value="<?= $k->permainan ?>" selected hidden>---Choose---</option>
+                  <?php
+                foreach ($k as $data) {
+                ?>
+                    <option value="<?= $data->permainan ?>" selected hidden>---Choose---</option>
                     <option value="Ayunan">Ayunan</option>
                     <option value="Seluncuran">Seluncuran</option>
+                  <?php }?>
                   </select>
                 </div>
               </div>
@@ -75,11 +81,16 @@
                 <div class="form-group has-icon-left">
                   <label for="email-id-icon">Biaya</label>
                   <select name="biaya" class="form-control" required>
-                    <option value="<?= $k->biaya ?>" selected hidden>---Choose---</option>
+                  <?php
+                foreach ($k as $data) {
+                ?>
+                    <option value="<?= $data->biaya ?>" selected hidden>---Choose---</option>
                     <option value="10000">10000</option>
                     <option value="20000">20000</option>
                     <option value="30000">30000</option>
+                    <?php }?>
                   </select>
+
                 </div>
               </div>
               <div class="col-12 d-flex justify-content-end">
